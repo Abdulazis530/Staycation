@@ -5,7 +5,7 @@ import imageHero_ from '../assets/images/img-hero-frame.jpg'
 import iconCity from '../assets/icons/icon-city.svg'
 import iconTravel from '../assets/icons/icon-travel.svg'
 import iconTreasure from '../assets/icons/icon-treasure.svg'
-
+import numberFormat from '../utilities/formatNumber'
 export default function Hero(props) {
 
     const showMostPicked = () => {
@@ -14,6 +14,7 @@ export default function Hero(props) {
             behavior: "smooth"
         })
     }
+
     return (
         <section className="container pt-4">
             <div className="row align-items-center">
@@ -40,7 +41,7 @@ export default function Hero(props) {
                                 src={iconTravel}
                                 alt={`${props.data.travelers} Travelers`} />
                             <h6 className="mt-3">
-                                {props.data.travelers} {" "}<span className="text-gray-500 font-weight-light">Travelers</span>
+                                {numberFormat(props.data.travelers)} {" "}<span className="text-gray-500 font-weight-light">Travelers</span>
                             </h6>
                         </div>
                         <div className="col-auto" style={{ marginRight: 35 }}>
@@ -50,7 +51,7 @@ export default function Hero(props) {
                                 src={iconTreasure}
                                 alt={`${props.data.treasures} Treasure`} />
                             <h6 className="mt-3">
-                                {props.data.treasures}{" "} <span className="text-gray-500 font-weight-light">Treasure</span>
+                                {numberFormat(props.data.treasures)}{" "} <span className="text-gray-500 font-weight-light">Treasure</span>
                             </h6>
                         </div>
                         <div className="col-auto">
@@ -60,7 +61,7 @@ export default function Hero(props) {
                                 src={iconCity}
                                 alt={`${props.data.cities}Travelers`} />
                             <h6 className="mt-3">
-                                {props.data.cities}{" "} <span className="text-gray-500 font-weight-light">Cities</span>
+                                {numberFormat(props.data.cities)}{" "} <span className="text-gray-500 font-weight-light">Cities</span>
                             </h6>
                         </div>
 
@@ -71,7 +72,7 @@ export default function Hero(props) {
                         <img src={imageHero} alt="Room with Couches" className="img-fluid position-absolute" style={{
                             margin: '-30px 0 0 -30px', zIndex: 1
                         }} />
-                        <img src={imageHero_} _ alt="Room with Couches frame" className="img-fluid position-absolute" style={{
+                        <img src={imageHero_} alt="Room with Couches frame" className="img-fluid position-absolute" style={{
                             margin: '0 -15px -15px 0p'
                         }} />
                     </div>
