@@ -4,7 +4,11 @@ import PageDetailTitle from '../parts/PageDetailTitle';
 import itemDetails from '../dummyJson/itemDetails.json'
 import FeaturedImage from '../parts/FeaturedImage';
 import PageDetailDescription from '../parts/PageDetailDescription';
-
+import BookingForm from '../parts/BookingForm';
+import Categories from '../parts/Categories';
+import Testimony from '../parts/Testimony';
+import FooterPage from '../parts/FooterPage'
+import Fade from 'react-reveal/Fade';
 
 export default class DetailPage extends Component {
     componentDidMount() {
@@ -27,13 +31,20 @@ export default class DetailPage extends Component {
                 <section className="container">
                     <div className="row">
                         <div className="col-7 pr-5">
-                            <PageDetailDescription data={itemDetails} />
+                            <Fade bottom>
+                                <PageDetailDescription data={itemDetails} />
+                            </Fade>
                         </div>
                         <div className="col-5">
-                            BOOKING FORM
+                            <Fade bottom>
+                                <BookingForm itemDetails={itemDetails} />
+                            </Fade>
                         </div>
                     </div>
                 </section>
+                <Categories data={itemDetails.categories} />
+                <Testimony data={itemDetails.testimonial} />
+                <FooterPage />
             </>
         )
     }

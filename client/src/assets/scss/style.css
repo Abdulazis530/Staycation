@@ -11164,7 +11164,11 @@ section {
 }
 
 .card {
-  height: 100%;
+  border-radius: 15px;
+}
+
+.card.bordered {
+  border: 1px solid #e9ecef;
 }
 
 .card .tag {
@@ -11205,7 +11209,6 @@ section {
 }
 
 .card.card-featured {
-  border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
   height: 100%;
@@ -11320,5 +11323,10 @@ footer .copyrights {
   margin-top: 50px 0;
   font-weight: 300;
   color: #b0b0b0;
+}
+
+main a {
+  color: #ced4da;
+  font-weight: 300;
 }
 /*# sourceMappingURL=style.css.map */
