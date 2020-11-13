@@ -2,9 +2,6 @@ import React from 'react'
 import Button from '../elements/Button/Button'
 import imageHero from '../assets/images/img-hero.jpg'
 import imageHero_ from '../assets/images/img-hero-frame.jpg'
-import iconCity from '../assets/icons/icon-city.svg'
-import iconTravel from '../assets/icons/icon-travel.svg'
-import iconTreasure from '../assets/icons/icon-treasure.svg'
 import numberFormat from '../utilities/formatNumber'
 import Fade from 'react-reveal/Fade';
 
@@ -41,7 +38,7 @@ export default function Hero(props) {
                                 <img
                                     height="25"
                                     width="25"
-                                    src={iconTravel}
+                                    src="/images/icon-travel.svg"
                                     alt={`${props.data.travelers} Travelers`} />
                                 <h6 className="mt-3">
                                     {numberFormat(props.data.travelers)} {" "}<span className="text-gray-500 font-weight-light">Travelers</span>
@@ -51,7 +48,7 @@ export default function Hero(props) {
                                 <img
                                     height="25"
                                     width="25"
-                                    src={iconTreasure}
+                                    src="/images/icon-treasure.svg"
                                     alt={`${props.data.treasures} Treasure`} />
                                 <h6 className="mt-3">
                                     {numberFormat(props.data.treasures)}{" "} <span className="text-gray-500 font-weight-light">Treasure</span>
@@ -61,7 +58,7 @@ export default function Hero(props) {
                                 <img
                                     height="25"
                                     width="25"
-                                    src={iconCity}
+                                    src="/images/icon-city.svg"
                                     alt={`${props.data.cities}Travelers`} />
                                 <h6 className="mt-3">
                                     {numberFormat(props.data.cities)}{" "} <span className="text-gray-500 font-weight-light">Cities</span>
