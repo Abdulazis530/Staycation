@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade'
 
 export default function FeaturedImage({ data }) {
     return (
-        <div className="container">
+        <div className="container mb-5">
             <div className="container-grid sm">
                 {data.map((item, index) => (
                     <div
