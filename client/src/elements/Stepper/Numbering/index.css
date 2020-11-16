@@ -1,0 +1,86 @@
+ol.stepper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+ol.stepper li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  color: #fff;
+}
+
+ol.stepper li::after {
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="31" height="22" viewBox="0 0 31 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 18.5L9.67127 19.9948L11.0206 21.1942L12.3514 19.9743L11 18.5ZM30.3514 3.47431C31.1657 2.72792 31.2207 1.46279 30.4743 0.648551C29.7279 -0.165687 28.4628 -0.220693 27.6486 0.525692L30.3514 3.47431ZM0.671272 11.9948L9.67127 19.9948L12.3287 17.0052L3.32873 9.00518L0.671272 11.9948ZM12.3514 19.9743L30.3514 3.47431L27.6486 0.525692L9.64855 17.0257L12.3514 19.9743Z"fill="white"/> </svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #20c997;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .35s transform ease-in-out;
+  transition: .35s transform ease-in-out;
+}
+
+ol.stepper li:not(:last-child) {
+  margin-right: 60px;
+}
+
+ol.stepper li:not(:last-child)::before {
+  content: "";
+  z-index: -2;
+  top: 50%;
+  left: 100%;
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background-color: #e9ecef;
+}
+
+ol.stepper li.active {
+  background-color: #e9ecef;
+  color: #b0b0b0;
+}
+
+ol.stepper li.active::after {
+  z-index: -1;
+  background: white;
+  border: 1px solid #e9ecef;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+ol.stepper li.active ~ li {
+  color: #b0b0b0;
+  background: #e9ecef;
+}
+
+ol.stepper li.active ~ li::after {
+  content: none;
+}
+/*# sourceMappingURL=index.css.map */
