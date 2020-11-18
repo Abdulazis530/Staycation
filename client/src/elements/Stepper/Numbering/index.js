@@ -2,7 +2,7 @@ import React from 'react'
 import propTypes from "prop-types"
 import Fade from "react-reveal/Fade"
 
-import "./index.scss"
+import "./_Numbering.scss"
 export default function Numbering({ style, className, data, current }) {
 
     const keysOfData = Object.keys(data)
